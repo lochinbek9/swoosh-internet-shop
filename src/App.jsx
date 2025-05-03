@@ -1,17 +1,16 @@
-import { useState } from 'react'
-
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import About from "./pages/about-page/About";
 
 function App() {
- 
-
-  console.log("Hello");
-  
   return (
-    <>
-     
-    </>
-  )
+    <Router>
+      <div className="app">
+        <Routes>
+          <Route path="/" element={<About />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
