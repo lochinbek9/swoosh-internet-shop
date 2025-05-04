@@ -1,0 +1,9 @@
+/* ! TODO: PRIVACY START */
+
+.privacy__top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ! FIXME: PRIVACY END */
