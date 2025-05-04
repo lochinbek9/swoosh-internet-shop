@@ -1,13 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./pages/about-page/About";
+import PrivacyPolicy from "./pages/privacy-policy-page/PrivacyPolicy";
 
 function App() {
   return (
     <Router>
       <div className="app">
         <Routes>
-          {/* <Route path="/" element={<MainPage />} /> */}
-          <Route path="/" element={<About />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
       </div>
     </Router>

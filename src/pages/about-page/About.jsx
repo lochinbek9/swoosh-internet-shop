@@ -104,9 +104,12 @@ function About() {
   return (
     <main>
       <section className="about">
+        {/*TODO: ABOUT START */}
         <div className="container about__container">
           <div className="about__top">
-            <Link to="/">Swoosh Store</Link>
+            <a href="#" className="home__link">
+              Swoosh Store
+            </a>
             <span className="">→</span>
             <p>О компании</p>
           </div>
@@ -123,6 +126,8 @@ function About() {
           </p>
           <img src={image1} alt="Изображение" className="about__image" />
         </div>
+        {/* FIXME: ABOUT END */}
+        {/* TODO: ADS START */}
         <div className="container about__ads">
           <div className="about__left">
             <h2 className="about__title2">Легендарное наследие Nike:</h2>
@@ -177,6 +182,8 @@ function About() {
             </form>
           </div>
         </div>
+        {/* FIXME: ADS END */}
+        {/* TODO: CENTER START */}
         <hr className="linehr" />
         <div className="container about__center">
           <div className="about__cards">
@@ -211,6 +218,8 @@ function About() {
             </div>
           </div>
         </div>
+        {/* FIXME: CENTER END */}
+        {/* TODO: ARTICLE START */}
         <hr className="linerh" />
         <article className="container article__container">
           <p className="article__left">
@@ -239,7 +248,8 @@ function About() {
           </p>
           <img src={image2} alt="Изображение" className="article__image" />
         </article>
-
+        {/* FIXME: ARTICLE END */}
+        {/* TODO: SLIDER START */}
         <div className="container">
           <div
             className="slider-container"
@@ -286,6 +296,7 @@ function About() {
             </div>
           </div>
         </div>
+        {/* FIXME: SLIDER END */}
       </section>
     </main>
   );

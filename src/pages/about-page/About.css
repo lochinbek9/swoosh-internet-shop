@@ -1,4 +1,4 @@
-/*! HERO START */
+/*! TODO: HERO START */
 .about__top {
     display: flex;
     align-items: center;
@@ -6,7 +6,7 @@
 }
 
 .home__link {
-    color: #000;
+    color: #868686;
 }
 
 .about__title {
@@ -59,9 +59,9 @@
     letter-spacing: 0%;
 }
 
-/*! HERO END */
+/*! FIXME: HERO END */
 
-/*! ADS START */
+/*! TODO: ADS START */
 .about__ads {
     display: flex;
     justify-content: space-between;
@@ -150,9 +150,9 @@
     color: #666;
 }
 
-/*! ADS END */
+/*! FIXME: ADS END */
 
-/*! CENTER START */
+/*! TODO: CENTER START */
 .about__cards {
     display: flex;
     align-items: center;
@@ -188,9 +188,9 @@
     margin-bottom: 60px;
 }
 
-/*! CENTER END */
+/*! FIXME: CENTER END */
 
-/*! ARTICLE START */
+/*! TODO: ARTICLE START */
 .article__container {
     display: flex;
     align-items: center;
@@ -214,9 +214,9 @@
     z-index: 9;
 }
 
-/*! ARTICLE END */
+/*! FIXME: ARTICLE END */
 
-/*! SLIDER START */
+/*! TODO: SLIDER START */
 .slider-container {
     position: relative;
     overflow: hidden;
@@ -338,4 +338,4 @@
     color: #000;
 }
 
-/*! SLIDER END */
+/*! FIXME: SLIDER END */
