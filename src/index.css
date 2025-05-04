@@ -15,8 +15,10 @@ body {
     font-family: "PT Sans", sans-serif;
 }
 
-a {
+a,
+button {
     text-decoration: none;
+    cursor: pointer;
 }
 
 ul,
