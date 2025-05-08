@@ -107,7 +107,7 @@ function About() {
         {/*TODO: ABOUT START */}
         <div className="container about__container">
           <div className="about__top">
-            <a href="#" className="home__link">
+            <a href="/" className="home__link">
               Swoosh Store
             </a>
             <span className="">→</span>
@@ -172,7 +172,7 @@ function About() {
                 Подписаться
               </button>
               <a
-                href="#"
+                href="/privacy"
                 className="blank"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -283,7 +283,7 @@ function About() {
                       <div className="slide-title">{slide.title}</div>
                       <div className="slide-footer">
                         <span>{slide.date}</span>
-                        <a href="#">Подробнее</a>
+                        <a href="/">Подробнее</a>
                       </div>
                     </div>
                     <div className="slide-image">
