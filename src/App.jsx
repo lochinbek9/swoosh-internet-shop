@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./pages/about-page/About";
 import PrivacyPolicy from "./pages/privacy-policy-page/PrivacyPolicy";
+import Contact from "./pages/contact-page/Contact";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
     </Router>

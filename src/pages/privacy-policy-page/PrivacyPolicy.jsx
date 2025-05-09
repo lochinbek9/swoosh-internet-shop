@@ -1,7 +1,13 @@
 import React from "react";
+import { useEffect } from "react";
+// import { useState } from "react";
 import "./PrivacyPolicy.css";
 
 function PrivacyPolicy() {
+  useEffect(() => {
+    document.title = "Политика конфиденциальности";
+    console.log("Privacy Policy page loaded");
+  }, []);
   return (
     <main>
       <section className="privacy-policy">
@@ -319,7 +325,12 @@ function PrivacyPolicy() {
             в сети Интернет по указанному в пункте 9.2. адресу. 9.3. Все
             предложения или вопросы по настоящей Политике конфиденциальности
             следует отправлять на адрес электронной почты:{" "}
-            <a href="mailto:info@https://SwooshStore.ru" className="privacy__link">info@SwooshStore.ru</a>{" "}
+            <a
+              href="mailto:info@https://SwooshStore.ru"
+              className="privacy__link"
+            >
+              info@SwooshStore.ru
+            </a>{" "}
             .
           </p>
         </div>
