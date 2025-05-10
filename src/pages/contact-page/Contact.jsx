@@ -22,12 +22,50 @@ function Contact() {
   };
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isError, setIsError] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, email, message } = e.target.elements;
+
+    const BOT_TOKEN = "8087323596:AAFs65Wbo4RKDbhcK-wx-EYvQiA1wwISoaI";
+    const CHAT_ID = "6243027711";
+
+    const telegramMessage = `
+Contact Page Form:
+Name: ${name.value}
+Email: ${email.value}
+Message: ${message.value}
+    `;
+
     if (name.value.trim() && email.value.trim() && message.value.trim()) {
-      setIsSubmitted(true);
+      try {
+        const response = await fetch(
+          `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              chat_id: CHAT_ID,
+              text: telegramMessage,
+            }),
+          }
+        );
+
+        if (response.ok) {
+          setIsSubmitted(true);
+          setIsError(false);
+        } else {
+          setIsError(true);
+          setIsSubmitted(false);
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        setIsError(true);
+        setIsSubmitted(false);
+      }
     }
   };
 
@@ -122,7 +160,24 @@ function Contact() {
       </div>
       <hr className="contact__line" />
       <div className="container contact__bottom">
-        {isSubmitted ? (
+        {isError ? (
+          <div className="error">
+            <i
+              className="fa fa-times-circle"
+              style={{
+                fontSize: "80px",
+                color: "#d32f2f",
+                boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+                borderRadius: "50%",
+              }}
+            ></i>
+            <h2>Ошибка!</h2>
+            <p>
+              Произошла ошибка при отправке сообщения. Пожалуйста, попробуйте
+              еще раз.
+            </p>
+          </div>
+        ) : isSubmitted ? (
           <div className="success">
             <i
               className="fa fa-check-circle"
@@ -140,11 +195,7 @@ function Contact() {
             </p>
           </div>
         ) : (
-          <form
-            onSubmit={handleSubmit}
-            className="contact__form"
-            action={"https://echo.htmlacademy.ru"}
-          >
+          <form onSubmit={handleSubmit} className="contact__form">
             <div className="form__row">
               <div className="input__group">
                 <input type="text" id="name" placeholder=" " required />
