@@ -236,3 +236,30 @@
     max-width: 600px;
     margin: 0 auto;
 }
+
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 100px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #ffe6e6;
+}
+
+.error h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 22px;
+    color: #d32f2f;
+}
+
+.error p {
+    font-size: 18px;
+    color: #414042;
+    max-width: 600px;
+    margin: 0 auto;
+}

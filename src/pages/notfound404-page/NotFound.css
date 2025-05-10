@@ -110,6 +110,15 @@
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
+    transition: all 0.3s ease;
+}
+
+.notfound__btn:hover {
+    transform: scale(1.05);
+}
+
+.notfound__btn:active {
+    transform: scale(0.95);
 }
 
 .notfound__right {
