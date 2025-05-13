@@ -1,0 +1,43 @@
+.blog__post__title {
+    margin-top: 25px;
+    margin-bottom: 78px;
+}
+
+.blog__post__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    margin-bottom: 28px;
+}
+
+.blog__post__image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.blog__post__subtitle1 {
+    margin-top: 44px;
+    margin-bottom: 20px;
+}
+
+.blog__post__subtitle2,
+.blog__post__subtitle3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.blog__post__text3 {
+    margin-bottom: 50px;
+}
+
+.blog__post__socials {
+    margin-top: 30px !important;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.socials__title {
+    font-size: 18px;
+}
