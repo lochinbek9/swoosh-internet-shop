@@ -3,6 +3,11 @@ import { useParams } from "react-router-dom";
 import "./BlogPost.css";
 
 function BlogPost() {
+  useEffect(() => {
+    document.title = "Блог - Полная статья";
+    console.log("Blog post page loaded");
+  }, []);
+
   const { id } = useParams();
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
